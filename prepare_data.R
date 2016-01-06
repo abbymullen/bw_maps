@@ -12,3 +12,5 @@ raw <- read_csv("ship-movements.csv")
 raw <- raw %>% 
   filter(!is.na(long),
          !is.na(lat))
+
+saveRDS(raw, file = "ship_data.rds")

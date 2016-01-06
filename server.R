@@ -40,7 +40,7 @@ shinyServer(function(input, output, session) {
       leafletProxy("map", data = selected) %>%
       addCircleMarkers(layerId = ~ship, lng = ~long, lat = ~lat,
       color = ~ship_colors(ship), 
-      popup = ~paste(ship, "Lat: ", lat, "Lon:", long),
+      popup = ~paste(ship, '\n', "Lat: ", lat, '\n', "Lon:", long),
       fillOpacity = 0.4, weight = 2)
     }
 
